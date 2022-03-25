@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  asuro_assignment:
+    image: asuro_php_assignment:latest
+    container_name: asuro_php_assignment
+    restart: "no"
+    volumes:
+      - ".:/var/www"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: local
+    ports:
+      - "7777:80"
+
+networks:
+  default:
+    name: sm_assignment
