@@ -34,6 +34,6 @@ class Calculus
     }
 
     public function sub() : string {
-        return bcsub($this->a, $this->b, $this->scale);
+        return bcsub($this->b, $this->a, $this->scale);
     }
 }
