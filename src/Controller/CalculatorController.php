@@ -60,7 +60,7 @@ class CalculatorController extends AbstractController
             return $this->json(['success' => false, 'errors' => (string)$errors], 400);
         }
 
-        return $this->json(['success' => true, 'result' => $task->sub()]);
+        return $this->json(['success' => true, 'result' => $task->mul()]);
     }
 
     #[Route('api/v1/divide/{a}/by/{b}', name:'division', methods: ['GET'])]
